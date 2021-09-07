@@ -1,0 +1,96 @@
+.footer {
+    background-color: #F4F4F4;
+    // height: 100vh
+    .footer-wrap {
+        @include undersp-side {
+            width: 80%;
+            margin: 0 auto;
+    
+            .footer-sns {
+                    text-align: right;
+
+                .footer-twitter {
+                    width: 55px;
+                    height: 35px;
+                    // margin: 7% 2% 0 10%;
+                }
+                .footer-instagram {
+                    width: 40px;
+                    height: 40px;
+                    margin: 7% 2% 0 10%;
+                }
+            }
+    
+            .footer-menu {
+                @include undersp-side {
+                    margin-top: 10%;
+                    position: relative;
+                    .menu {
+                        display: block;
+                        cursor: pointer;
+                    }
+                
+                    .menu1 {
+                        width: auto;
+                        text-align: center;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            display: block;
+                            width: 150px;
+                            height: 2px;
+                            background-color: #000000;
+                            position: absolute;
+                            left: calc(50% - 75px);
+                            margin-top: 10px;
+                        }  
+                    }
+                    
+                    .menu2 {
+                        @extend .menu1;
+                        margin-top: 20%;
+                    }
+        
+                    .menu3 {
+                        @extend .menu1;
+                        margin-top: 20%;
+                    }
+        
+                    .menu4 {
+                        @extend .menu1;
+                        margin-top: 20%;
+                    }
+                }
+            }
+        }
+        @include overtab {
+            padding-top: 7%;
+            display: flex;
+            flex-flow: row-reverse;
+            justify-content: space-around;
+            .footer-sns {
+                .footer-instagram {
+                    margin-left: 30px;
+                }
+            }
+            .footer-menu {
+                display: flex;
+                gap: 45px;
+                cursor: pointer;
+            }
+        }
+    } 
+
+    .copyright {
+        display: flex;
+        justify-content: space-around;
+        font-size: 14px;
+        margin-top: 10%;
+        padding-bottom: 6%;
+        @extend .footer-wrap;
+        .copy {
+            font-family: map-get($map: $font-familys, $key: font-family6);
+            font-size: .875rem;
+        }
+    }
+}

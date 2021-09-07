@@ -1,0 +1,89 @@
+.pageback {
+    position: absolute;
+}
+
+.sp-title {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 10% 0 0 0;
+}
+
+.sp-lunchtime {
+    @include sp-menufont;
+    margin-bottom: 3%;
+    @include overtab {
+        font-size: 1.15rem;
+    }
+}
+
+.sp-subtitle {
+    font-size: .75rem;
+    @include sp-menufont;
+}
+
+.sp-option {
+    font-size: .65rem;
+}
+
+.sp-option2 {
+    font-size: .65rem;
+
+}
+
+.sp-menu-card {
+    border: none;
+    box-shadow: 2px 2px 5px #797963;
+    border-radius: 10px;
+    width: 90%;
+    padding: 0;
+    
+    img {
+        border-radius: 10px;
+    }
+}
+
+.sp-foodname {
+    font-family: map-get($map: $font-familys, $key: font-family3);
+}
+
+.sp-price {
+    margin-top: 2%;
+    font-family: map-get($map: $font-familys, $key: font-family4);
+    font-size: .75rem;
+}
+
+.page-top {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    background-color: rgb(104, 103, 103);
+}
+.page-top-icon {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    svg {
+        color: #fff;
+    }
+}
+
+.sp-footer {
+    width: 90%;
+}
+
+.sp-copyright {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 10%;
+}
+.sp-footer-sns {
+    text-align: right;
+    padding-top: 40px;
+    .sp-footer-instagram {
+        margin-left: 5%;
+    }
+}

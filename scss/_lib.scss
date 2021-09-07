@@ -1,0 +1,154 @@
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'DIN Alternate';
+}
+
+$font-familys: (
+    //for main title or sub title
+    font-family2: 'Songti TC',
+
+    //for menu title
+    font-family3: 'Khmer Sangam MN',
+
+    //for price
+    font-family4: 'Krungthep',
+
+    // for footer nemu title
+    font-family5: 'Lao MN',
+
+    // for copy right
+    font-family6: 'Noto Mono for Powerline'
+);
+
+
+
+$menu-btn-radius: 12px; 
+
+@mixin main-fonts {
+    font-weight: 600;
+}
+
+@mixin sp-menufont {
+    font-weight: 600;
+    text-align: center;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 9.24%;
+    font-size: 1.375rem;
+}
+
+.page-border {
+    // position: relative;
+    content: "";
+    display: block;
+    width: 100vw;
+    border: 1px solid #000000;
+    margin-top: 9.24%;
+}
+.toggleMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 120px 0 20px 0;
+    background-color: rgb(240, 240, 240);
+    opacity: 0.95;
+    z-index: 3;
+    
+    .toggle-menus {
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        &:hover {
+            background-color: #8f5c5c;
+            transition: .5s ease;
+            color: #000000;
+        }
+    }
+}
+
+.myToggle {
+    display: block;
+}
+
+.item4 {
+    background-color: rgb(167, 250, 190);
+    font-size: .85rem;
+    @include main-fonts;
+}
+.item5 {
+    background-color: rgb(95, 113, 252);
+    font-size: .85rem;
+    @include main-fonts;
+}
+
+
+
+//sp 縦
+@mixin sp {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+//sp 横
+@mixin sp-side {
+    @media (min-width: 576px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+//tab
+@mixin tab {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+// pc
+@mixin pc {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+// over pc
+@mixin overpc {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+//over tab
+@mixin overtab {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin pcpc {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// ------------------------------
+
+@mixin undersp-side {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin undertab {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+                    
